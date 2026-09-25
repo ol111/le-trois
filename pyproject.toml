@@ -1,0 +1,31 @@
+[project]
+name = "le-trois"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "ol111", email = "olivier.jeantet@yahoo.fr" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "huggingface-hub>=1.32.0",
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.3",
+    "pillow>=12.3.0",
+    "python-dotenv>=1.2.3",
+    "requests>=2.34.2",
+    "tqdm>=4.70.1",
+]
+
+[project.scripts]
+le-trois = "le_trois:main"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+    "jupyterlab>=4.6.4",
+]
